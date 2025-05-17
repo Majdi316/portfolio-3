@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Assistant";
+}
+.image {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+}
+.image .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.image .content h1{
+    color: #d3e10e;
+    font-size: 45px;
+    text-align: center;
+}
+.image .content p{
+    text-align: center;
+    margin-top: 20px;
+    color: #f6f6f6;
+}
+.form-content form {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.form-content form label {
+  display: block;
+  color: #011560;
+  font-weight: bold;
+}
+.form-content form .input-content {
+  width: 300px;
+}
+.form-content form .input-content .input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #f6f6f6;
+  border-bottom: 3px solid #d3e10e;
+  font-size: 25px;
+}
+.form-content form .input-content .button {
+  width: 60%;
+  text-align: center;
+  height: 35px;
+  background-color: #d3e10e;
+  color: #011560;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+    .form-content form .input-content{
+        width: 250px;
+    }
+}
+@media (max-width: 900px) {
+    .form-content form .input-content{
+        width: 220px;
+    }
+    .image .content h1{
+        font-size: 35px;
+    }
+    .image{
+        height: 55vh;
+    }
+}
+@media (max-width: 690px) {
+    .form-content form .input-content{
+        width: 140px;
+    }
+    .image .content h1{
+        font-size: 25px;
+    }
+    .image{
+        height: 45vh;
+    }
+}
+@media (max-width: 550px) {
+    .form-content form{
+        flex-direction: column;
+    }
+    .form-content form .input-content{
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .image{
+        height: 50vh;
+    }
+    .image .content {
+      
+    width: 100%;
+    }
+    .form-content form .input-content .button {
+        width: 100%;
+    }
+}
+

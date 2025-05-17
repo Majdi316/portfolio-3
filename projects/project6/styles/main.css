@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Heebo:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e5eeff;
+}
+.wrapper {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: repeat(6, 200px);
+  gap: 15px;
+}
+
+.wrapper > div img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper > div.world {
+  background-color: #020253;
+  grid-column: 3/5;
+  grid-row: 1/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper > div.world h1,
+body > div.world h1 {
+  color: #0ee1da;
+  font-weight: 900;
+  font-family: Assistant;
+  letter-spacing: 4px;
+  font-size: 40px;
+}
+.wrapper > div.world p,
+body > div.world p {
+  color: #f9f9f9;
+  text-align: center;
+  width: 85%;
+  margin-top: 20px;
+  font-family: Assistant;
+}
+.wrapper > div.form-content {
+  background-color: #8e097c;
+  grid-column: 1/3;
+  grid-row: 4/7;
+}
+.wrapper > div.form-content h1 {
+  color: #ffffff;
+  font-size: 27px;
+  text-align: center;
+  margin-top: 35px;
+  font-family: Assistant;
+}
+.wrapper > div.form-content p {
+  direction: rtl;
+  color: #f9f9f9;
+  text-align: center;
+  margin: 20px 15px;
+  font-family: Assistant;
+}
+.wrapper > div.form-content form {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.wrapper > div.form-content form .input-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 25px;
+  direction: rtl;
+}
+.wrapper > div.form-content form .input-content label {
+  color: #0ee1da;
+  margin-bottom: 5px;
+  font-family: Heebo;
+}
+.wrapper > div.form-content form .input-content input,
+.wrapper > div.form-content form .input-content textarea {
+  border: none;
+  outline: none;
+  font-size: 25px;
+  background-color: #e5eeff;
+  border-bottom: 3px solid #0ee1da;
+  width: 100%;
+}
+.wrapper > div.form-content form .input-content textarea {
+  resize: none;
+  height: 120px;
+}
+.wrapper > div.form-content form .button {
+  width: 100%;
+}
+.wrapper > div.form-content form .button input {
+  width: 100%;
+  font-size: 20px;
+  height: 40px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #011560;
+  font-family: Heebo;
+  background-color: #0ee1da;
+}
+body > div.world {
+  background-color: #020253;
+  display: none;
+  height: 250px;
+}
+@media (max-width: 950px) {
+  .wrapper {
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 100px 100px 100px 220px 220px 220px;
+  }
+  .wrapper > div.world h1,
+  body > div.world h1 {
+    font-size: 22px;
+  }
+  .wrapper > div.world p,
+  body > div.world p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 750px) {
+  .wrapper {
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 220px 220px 220px;
+  }
+  .wrapper > div.world h1,
+  body > div.world h1 {
+    font-size: 18px;
+  }
+  .wrapper > div.world p,
+  body > div.world p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    flex-direction: column;
+  }
+  body > div.world {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  body > div.world h1 {
+    text-align: center;
+    font-size: 25px;
+  }
+  body > div.world p {
+    font-size: 16px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .wrapper {
+    grid-template-columns: 150px 150px;
+    grid-template-rows: repeat(10, 200px);
+    gap: 15px;
+  }
+  .wrapper > div.world {
+    display: none;
+  }
+  .img506-4 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .img506-1 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .wrapper > div.form-content {
+    grid-row: 5/8;
+  }
+}

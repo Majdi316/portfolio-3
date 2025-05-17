@@ -1,0 +1,151 @@
+:root {
+  --borderWidth: 4px;
+  --borderColor: #222;
+  --greenColor: #7cf03d;
+  --textColor: #e4e6c3;
+  --mainColor: #121113;
+  --secondaryColor: #1f242d;
+  --titleColor: #aaabc0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+hr {
+  width: 500px;
+}
+
+#errors {
+  color: coral;
+}
+
+#board {
+  width: 450px;
+  height: 450px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile {
+  width: 48px;
+  height: 48px;
+  border: 1px solid lightgray;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#digits {
+  width: 450px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.number {
+  width: 44px;
+  height: 44px;
+  border: 1px solid black;
+  margin: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-selected {
+  background-color: gray;
+}
+
+.tile-start {
+  background-color: whitesmoke;
+}
+.tile-correct{
+    color: green;
+}
+
+.horizontal-line {
+  border-bottom: 1px solid black;
+}
+
+.vertical-line {
+  border-right: 1px solid black;
+}
+.popup {
+  position: fixed;
+  background-color: var(--mainColor);
+  padding: 100px 20px;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid var(--greenColor);
+}
+.try-again-btn {
+  width: 165px;
+  height: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: var(--greenColor);
+  border-radius: 20px;
+  border: 1px solid var(--greenColor);
+  box-shadow: 0 0 10px var(--greenColor);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.try-again-btn:hover {
+  color: var(--greenColor);
+  background: transparent;
+  box-shadow: none;
+}
+.popup-win {
+  position: fixed;
+  background-color: var(--mainColor);
+  padding: 100px 20px;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  color: var(--greenColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid var(--greenColor);
+}
+@media (max-width: 500px) {
+  #board {
+    width: 270px;
+    height: 270px;
+  }
+  .tile {
+    width: 28px;
+    height: 28px;
+  }
+  #digits {
+    width: 270px;
+  }
+  .number {
+    width: 24px;
+    height: 24px;
+  }
+}

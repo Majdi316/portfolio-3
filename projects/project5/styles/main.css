@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Heebo;
+}
+.wrapper {
+  display: flex;
+  width: 75vw;
+  height: 75vh;
+}
+.wrapper > div {
+  height: 100%;
+  width: 50%;
+}
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 35px;
+}
+.form-content h1 {
+  margin-top: 35px;
+  font-size: 50px;
+  color: #fdbd03;
+  text-align: start;
+  width: 100%;
+}
+.form-content > div {
+  width: 100%;
+}
+.form-content > div p {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #020253;
+  text-align: start;
+  width: 50%;
+  direction: rtl;
+}
+.form-content form {
+  width: 100%;
+}
+.form-content form .tow-cols {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.form-content form .tow-cols .input-row {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 20px;
+}
+.form-content form .tow-cols .input-row label,
+.form-content form .one-cols label {
+  color: #2c2c2c;
+}
+.form-content form .tow-cols .input-row input,
+.form-content form .one-cols textarea {
+  width: 100%;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  background-color: #e5eeff;
+  border-bottom: 3px solid #fdbd03;
+}
+.form-content form .one-cols {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-content form .one-cols textarea {
+  height: 100px;
+  margin-bottom: 60px;
+  resize: none;
+}
+.form-content form .button {
+  width: 100%;
+  text-align: end;
+}
+.form-content form .button input {
+  width: 100px;
+  background-color: #fdbd03;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  text-align: center;
+  height: 35px;
+  font-weight: bold;
+  padding: 5px 0 5px 0;
+  cursor: pointer;
+}
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+}
+.image img {
+  height: 100%;
+  width: 75%;
+}
+.header-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10px;
+  background-color: #fdbd03;
+  width: 450px;
+}
+.footer-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 50%;
+  background-color: #fdbd03;
+}
+.empty {
+  height: 100px;
+  width: 100%;
+}
+.header-icon {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  background-color: #fdbd03;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+.footer-icon {
+  display: flex;
+  gap: 25px;
+  position: absolute;
+  bottom: 50px;
+  left: 25px;
+}
+.footer-icon .icon {
+  background-color: #fdbd03;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+@media (max-width: 800px) {
+  .footer-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .footer-icon .icon {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  .form-content > div p {
+    width: 100%;
+  }
+  .form-content h1 {
+    font-size: 35px;
+  }
+  .form-content form .tow-cols {
+    flex-direction: column;
+  }
+  .form-content form .tow-cols .input-row {
+    width: 100%;
+  }
+  .header-icon{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 550px) {
+  body {
+    justify-content: start;
+    height: 100%;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    height: 120vh;
+  }
+  .wrapper > div.image {
+    width: 100%;
+    height: 20%;
+    margin-top: 10px;
+  }
+  .wrapper > div.image img {
+    width: auto;
+  }
+  .wrapper > div.form-content {
+    width: 100%;
+    height: 50%;
+  }
+  .form-content form .button input {
+    width: 100%;
+  }
+  .empty {
+    display: none;
+    visibility: hidden;
+  }
+  .header-icon {
+    display: none;
+  }
+  .form-content h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  .form-content > div p {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer-line {
+    position: relative;
+    width: 100%;
+  }
+
+  .header-line {
+    width: 80%;
+  }
+}

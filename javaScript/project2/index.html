@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+  </head>
+  <body>
+    <div class="hint">
+      <div class="image">
+        <img id="hint-img" src="./images/pngfind.com-tip-png-6417431.png" alt="" />
+      </div>
+      <div class="hint-text"></div>
+    </div>
+    <div class="container">
+      <div class="game-info">
+        <div class="game-name">Hangman</div>
+        <div class="refresh"><button id="refresh-btn">Refresh</button></div>
+        <div class="category">Word From: <span></span></div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="hangman-draw">
+          <div class="the-draw">
+            <div class="the-stand"></div>
+            <div class="the-hang"></div>
+            <div class="the-rope"></div>
+            <div class="the-man">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="hands"></div>
+              <div class="legs"></div>
+            </div>
+          </div>
+        </div>
+        <div class="letters"></div>
+      </div>
+      <hr />
+      <div class="letters-guess"></div>
+    </div>
+    <audio
+      id="success"
+      src="./audio/068232_successwav-82815.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="fail"
+      src="./audio/game-over-31-179699.mp3"
+      preload="auto"
+    ></audio>
+    <!-- Script -->
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

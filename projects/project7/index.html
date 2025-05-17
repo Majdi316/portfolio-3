@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="shortcut icon" href="images/download.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>project 7</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="" />
+      </div>
+      <nav class="links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Collection</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="icons">
+        <i class="bx bx-search-alt-2"></i>
+        <i class="bx bx-user"></i>
+        <i class="bx bxs-cart"></i>
+      </div>
+    </header>
+    <main>
+      <div class="form-content">
+        <h2>DELIVERY <span>INFORMATION</span></h2>
+        <form>
+          <div class="tow-cols">
+            <input type="text" placeholder="First Name" required/>
+            <input type="text" placeholder="Last Name" required />
+          </div>
+          <input type="email" placeholder="Email Address" required />
+          <input type="text" placeholder="Street" required />
+          <div class="tow-cols">
+            <input type="text" placeholder="City"  required/>
+            <input type="text" placeholder="State" required />
+          </div>
+          <div class="tow-cols">
+            <input type="text" placeholder="Zip-Code" required />
+            <input type="text" placeholder="Country" required />
+          </div>
+          <input type="number" placeholder="Phone" required />
+          <div class="button"><input type="submit" value="place order" /></div>
+        </form>
+      </div>
+      <div class="cart-content">
+        <h2>CART <span>TOTALS</span></h2>
+        <div class="row">
+          <p>sub total</p>
+          <p class="green">$10.00</p>
+        </div>
+        <hr />
+        <div class="row">
+          <p>shipping fee</p>
+          <p>$5.00</p>
+        </div>
+        <hr />
+        <div class="row">
+          <p>discount</p>
+          <p class="red">$2.50</p>
+        </div>
+        <hr />
+        <div class="row">
+          <p>total</p>
+          <p class="green">$12.50</p>
+        </div>
+        <hr />
+        <div class="payment-method">
+          <h2>PAYMENT <span>METHOD</span></h2>
+          <div class="payment-method-wrapper">
+            <div class="content">
+              <img src="images/razorpay_logo.png" alt="" />
+            </div>
+            <div class="content">
+              <img src="images/stripe_logo.png" alt="" />
+            </div>
+            <div class="green-border">
+              <p>CASH ON DELIVERY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>programming by majdi hossen at 2/2/2025</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+:root {
+  --borderWidth: 4px;
+  --borderColor: #222;
+  --greenColor: #7cf03d;
+  --textColor: #e4e6c3;
+  --mainColor: #121113;
+  --secondaryColor: #1f242d;
+  --titleColor: #aaabc0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  background: var(--mainColor);
+}
+.control-buttons {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(7, 23, 31, 0.805);
+}
+.control-buttons span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--greenColor);
+  color: #fff;
+  padding: 15px 25px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.info-container {
+  width: 80%;
+  margin: 20px auto 0;
+  background-color: var(--secondaryColor);
+  padding: 20px;
+  font-size: 24px;
+  overflow: hidden;
+  border: 2px solid var(--greenColor);
+  color: var(--textColor);
+  font-weight: bold;
+}
+.info-container .name {
+  float: left;
+  width: 50%;
+}
+.info-container .tries {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+.memory-game-container {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+.memory-game-container.finished {
+  pointer-events: none;
+}
+.memory-game-container.no-clicking {
+  pointer-events: none;
+}
+.memory-game-container .game-block {
+  height: 200px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  flex: 1 0 200px;
+  margin: 0 10px 20px;
+}
+.memory-game-container .game-block .front {
+  background-color: #333;
+  line-height: 200px;
+}
+.memory-game-container .game-block .front:hover {
+  background: var(--greenColor);
+}
+.memory-game-container .game-block .front:before {
+  content: "!";
+  color: #fff;
+  font-size: 140px;
+  font-weight: bold;
+}
+
+.memory-game-container .game-block .back {
+  background-color: var(--secondaryColor);
+  transform: rotateY(180deg);
+}
+.memory-game-container .game-block .back img {
+  width: 140px;
+  height: 140px;
+  margin-top: 30px;
+}
+.memory-game-container .game-block .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+  border: 5px solid var(--greenColor);
+}
+.memory-game-container .game-block .face:hover {
+  border: 5px solid var(--textColor);
+}
+.memory-game-container .game-block.is-flipped,
+.memory-game-container .game-block.has-match {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+.popup {
+  position: fixed;
+  background-color: var(--mainColor);
+  padding: 100px 20px;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid var(--greenColor);
+}
+.try-again-btn {
+  width: 165px;
+  height: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: var(--greenColor);
+  border-radius: 20px;
+  border: 1px solid var(--greenColor);
+  box-shadow: 0 0 10px var(--greenColor);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.try-again-btn:hover {
+  color: var(--greenColor);
+  background: transparent;
+  box-shadow: none;
+}
+.popup-win {
+  position: fixed;
+  background-color: var(--mainColor);
+  padding: 100px 20px;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  color: var(--greenColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid var(--greenColor);
+}
+@media (max-width: 600px) {
+  .memory-game-container .game-block {
+    height: 100px;
+    flex: 1 0 100px;
+  }
+  .memory-game-container .game-block .front {
+    line-height: 100px;
+  }
+  .memory-game-container .game-block .front:before {
+    font-size: 70px;
+  }
+  .memory-game-container .game-block .back img {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+  }
+}

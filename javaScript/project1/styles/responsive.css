@@ -1,0 +1,100 @@
+@media (max-width: 770px) {
+  .navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  /* popup info */
+  .popup-info {
+    width: 300px;
+  }
+  .popup-info h2 {
+    font-size: 30px;
+  }
+  .popup-info .info {
+    font-size: 14px;
+  }
+  .popup-info .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .popup-info .btn-group .info-btn {
+    width: 100%;
+  }
+  .popup-info .btn-group .info-btn:nth-child(1) {
+    margin-bottom: 15px;
+  }
+  /* Navbar */
+
+  .logo {
+    font-size: 20px;
+  }
+  .main {
+    overflow: hidden;
+  }
+  /* home  */
+  .home {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .home-content {
+    max-width: 350px;
+  }
+  .home-content h1 {
+    font-size: 35px;
+  }
+  /* Game */
+  .game-section {
+    min-height: 100vh;
+  }
+  .game-section.active {
+    width: 50%;
+  }
+  .game-section .game-box {
+    width: 300px;
+  }
+  .game-box h1 {
+    font-size: 20px;
+  }
+  .game-box span {
+    font-size: 14px;
+  }
+  .game-box .question-text {
+    font-size: 16px;
+  }
+  .option-list .option {
+    font-size: 14px;
+  }
+  .game-footer .question-total {
+    font-size: 12px;
+  }
+  .game-footer .next-btn {
+    width: 60px;
+    height: 32px;
+    font-size: 14px;
+  }
+  /* Game Result  */
+  .game-section .result-box {
+    width: 300px;
+  }
+  .result-box h2 {
+    font-size: 30px;
+  }
+  .percentage-container .score-text {
+    font-size: 16px;
+    padding: 15px;
+    text-align: justify;
+  }
+  .result-box .buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .buttons button {
+    width: 100%;
+  }
+}

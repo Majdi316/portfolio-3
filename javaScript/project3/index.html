@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div class="control-buttons">
+        <span>Start Game</span>
+    </div>
+    <div class="info-container">
+      <div class="name">Hello: <span></span></div>
+      <div class="tries">Wrong Tries: <span>0</span></div>
+    </div>
+    <div class="memory-game-container">
+        <div class="game-block" data-tech="arduino">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/arduino.png" alt="arduino">
+            </div>
+        </div>
+        <div class="game-block " data-tech="arduino">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/arduino.png" alt="arduino">
+            </div>
+        </div>
+        <div class="game-block" data-tech="cpp">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/cpp.png" alt="cpp">
+            </div>
+        </div>
+        <div class="game-block" data-tech="cpp">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/cpp.png" alt="cpp">
+            </div>
+        </div>
+        <div class="game-block" data-tech="csh">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/csh.png" alt="csh">
+            </div>
+        </div>
+        <div class="game-block" data-tech="csh">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/csh.png" alt="csh">
+            </div>
+        </div>
+        <div class="game-block" data-tech="css">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/css.png" alt="css">
+            </div>
+        </div>
+        <div class="game-block" data-tech="css">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/css.png" alt="css">
+            </div>
+        </div>
+        <div class="game-block" data-tech="dart">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/dart.png" alt="dart">
+            </div>
+        </div>
+        <div class="game-block" data-tech="dart">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/dart.png" alt="dart">
+            </div>
+        </div>
+        <div class="game-block" data-tech="flutter">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/flutter.png" alt="flutter">
+            </div>
+        </div>
+        <div class="game-block" data-tech="flutter">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/flutter.png" alt="flutter">
+            </div>
+        </div>
+        <div class="game-block" data-tech="git">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/git.png" alt="git">
+            </div>
+        </div>
+        <div class="game-block" data-tech="git">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/git.png" alt="git">
+            </div>
+        </div>
+        <div class="game-block" data-tech="html">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/html.png" alt="html">
+            </div>
+        </div>
+        <div class="game-block" data-tech="html">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/html.png" alt="html">
+            </div>
+        </div>
+        <div class="game-block" data-tech="java">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/java.png" alt="java">
+            </div>
+        </div>
+        <div class="game-block" data-tech="java">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/java.png" alt="java">
+            </div>
+        </div>
+        <div class="game-block" data-tech="javascript">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/javascript.png" alt="javascript">
+            </div>
+        </div>
+        <div class="game-block" data-tech="javascript">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="./images/javascript.png" alt="javascript">
+            </div>
+        </div>
+    </div>
+    <audio
+    id="success"
+    src="./audio/tada-fanfare-a-6313.mp3"
+    preload="auto"
+  ></audio>
+  <audio
+    id="fail"
+    src="./audio/fail-234710.mp3"
+    preload="auto"
+  ></audio>
+  <audio
+  id="victory"
+  src="./audio/orchestral-win-331233.mp3"
+  preload="auto"
+></audio>
+<audio
+  id="lose"
+  src="./audio/violin-lose-5-185126.mp3"
+  preload="auto"
+></audio>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

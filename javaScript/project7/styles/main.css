@@ -1,0 +1,137 @@
+:root {
+  --borderWidth: 4px;
+  --borderColor: #222;
+  --greenColor: #7cf03d;
+  --textColor: #e4e6c3;
+  --mainColor: #121113;
+  --secondaryColor: #1f242d;
+  --titleColor: #aaabc0;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+  color: white;
+}
+
+.title {
+  margin: 20px;
+}
+
+.subtext {
+  color: #ccc;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.board {
+  display: inline-grid;
+  padding: 10px;
+  grid-template-columns: repeat(var(--size), 50px);
+  grid-template-rows: repeat(var(--size), 50px);
+  gap: 4px;
+  background-color: #777;
+}
+
+.board > * {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 2px solid #bbb;
+  user-select: none;
+}
+
+.board > [data-status="hidden"] {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.board > [data-status="mine"] {
+  background-color: red;
+}
+
+.board > [data-status="number"] {
+  background-color: none;
+}
+
+.board > [data-status="marked"] {
+  background-color: yellow;
+}
+
+.popup {
+  position: fixed;
+  background-color: var(--mainColor);
+  padding: 100px 20px;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid var(--greenColor);
+}
+.try-again-btn {
+  width: 165px;
+  height: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: var(--greenColor);
+  border-radius: 20px;
+  border: 1px solid var(--greenColor);
+  box-shadow: 0 0 10px var(--greenColor);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.try-again-btn:hover {
+  color: var(--greenColor);
+  background: transparent;
+  box-shadow: none;
+}
+.popup-win {
+  position: fixed;
+  background-color: var(--mainColor);
+  padding: 100px 20px;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+  color: var(--greenColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid var(--greenColor);
+}
+@media (max-width: 500px) {
+  .board {
+  
+    grid-template-columns: repeat(var(--size), 30px);
+    grid-template-rows: repeat(var(--size), 30px);
+    gap: 2px;
+    
+  }
+  body{
+    font-size: 16px;
+    margin-top: 100px;
+  }
+}

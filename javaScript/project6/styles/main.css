@@ -1,0 +1,15 @@
+#gameContainer{
+    text-align: center;
+}
+#gameBoard{
+    border: 3px solid;
+}
+#scoreText{
+    font-size: 80px;
+}
+#resetBtn{
+    width: 100px;
+    font-size: 22px;
+    height: 50px;
+    cursor: pointer;
+}

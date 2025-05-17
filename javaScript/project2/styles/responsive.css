@@ -1,0 +1,15 @@
+@media (max-width: 1020px) {
+    .row{
+        flex-direction: column;
+    }
+    .hangman-draw{
+        min-height: 324px;
+    }
+}
+@media (max-width: 550px) {
+    .game-info{
+        flex-direction: column;
+        gap: 25px;
+    }
+
+}

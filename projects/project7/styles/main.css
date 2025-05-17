@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+:root {
+  --text-color: rgb(36, 34, 34);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Outfit;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+header .logo {
+  width: 200px;
+  margin-left: 20px;
+}
+header .logo img {
+  width: 100%;
+  height: auto;
+}
+header nav,
+header .icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header nav a:link {
+  color: var(--text-color);
+}
+header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-size: 18px;
+  transition: 0.5s all ease-in-out;
+}
+header nav a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+header .icons {
+  margin-right: 20px;
+}
+header .icons i {
+  font-size: 25px;
+  color: var(--text-color);
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+  min-height: calc(100vh - 180px);
+  display: flex;
+}
+main .form-content,
+main .cart-content {
+  width: 50%;
+}
+main .form-content h2,
+main .cart-content h2,
+main .cart-content .payment-method h2 {
+  font-size: 25px;
+  color: rgb(107 114 128);
+  margin: 20px 0;
+}
+main .cart-content .payment-method h2 {
+  font-size: 18px;
+}
+
+main .form-content h2 span,
+main .cart-content h2 span,
+main .cart-content .payment-method h2 span {
+  color: rgb(55 65 81);
+}
+main .form-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+main .form-content form .tow-cols {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+}
+main .form-content form .tow-cols input,
+main .form-content form input {
+  width: 50%;
+  padding: 8px 18px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 0.25rem;
+}
+main .form-content form input {
+  width: 100%;
+}
+main .form-content form .button input {
+  border: none;
+  background-color: black;
+  color: white;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+main .form-content form .button input:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+main .cart-content {
+  padding: 8px 18px;
+}
+main .cart-content .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+main .cart-content .row p {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+main .cart-content .payment-method .payment-method-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main .cart-content .payment-method .payment-method-wrapper .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(90% / 3);
+  gap: 15px;
+  height: 40px;
+  border: 1px solid #2754ac;
+  padding: 8px 18px;
+}
+main .cart-content .payment-method .payment-method-wrapper .content img {
+  width: 100%;
+  height: 100%;
+}
+main .cart-content .payment-method .payment-method-wrapper .green-border p {
+  font-size: 14px;
+  font-weight: 500;
+}
+footer {
+  height: 90px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 15px;
+}
+footer p{
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+.green-border {
+  border: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(90% / 3);
+  gap: 15px;
+  height: 40px;
+  padding: 8px 18px;
+}
+@media (max-width: 800px) {
+  header nav {
+    display: none;
+  }
+  main .form-content form .tow-cols {
+    flex-direction: column;
+  }
+  main .form-content form .tow-cols input {
+    width: 100%;
+  }
+  main {
+    margin-bottom: 60px;
+  }
+  main .cart-content .payment-method .payment-method-wrapper {
+    flex-direction: column;
+    gap: 25px;
+  }
+  main .cart-content .payment-method .payment-method-wrapper .content,
+  .green-border {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  main {
+    flex-direction: column;
+  }
+  main .form-content,
+  main .cart-content {
+    width: 100%;
+  }
+  header .logo{
+    width: 100px;
+  }
+}
